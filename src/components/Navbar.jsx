@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <header className="fixed inset-0 pointer-events-none">
+    <header className="fixed inset-0 pointer-events-none z-50">
       <nav className="w-full h-full relative">
         <NavLink
           to="/"
