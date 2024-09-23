@@ -7,10 +7,9 @@ Source: https://sketchfab.com/3d-models/low-poly-head-e869717813844a06ab340feb89
 Title: Low-poly Head
 */
 
-import { useRef, useEffect } from 'react'
+import { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
-import { useThree } from '@react-three/fiber'
-import { useFrame } from '@react-three/fiber'
+
 
 import headScene from '../assets/3d/head.glb'
 

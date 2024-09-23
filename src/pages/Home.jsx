@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unknown-property */
 import { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import * as THREE from "three";
+// import * as THREE from "three";
 import Head from "../models/Head"; // Add this import
 
 const Home = () => {
