@@ -1,8 +1,14 @@
+import Layout from "../components/Layout";
 
 const Projects = () => {
   return (
-    <div>Projects</div>
-  )
-}
+    <Layout>
+      <section className="h-screen w-full">
+        <h1>Projects Page</h1>
+        {/* Your About page content */}
+      </section>
+    </Layout>
+  );
+};
 
-export default Projects
+export default Projects;

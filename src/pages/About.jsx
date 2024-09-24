@@ -1,12 +1,14 @@
-
+import Layout from "../components/Layout";
 
 const About = () => {
   return (
-    <>
-    <div>About</div>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-    </>
-  )
-}
+    <Layout>
+      <section className="h-screen w-full">
+        <h1>About Page</h1>
+        {/* Your About page content */}
+      </section>
+    </Layout>
+  );
+};
 
 export default About
