@@ -5,7 +5,7 @@ const About = () => {
     <Layout>
       <section className="h-screen w-full">
         <h1>About Page</h1>
-        {/* Your About page content */}
+        <p>Full stack web developer blending expertise in inclusive education and creative practices. Emphasizes the creation of effective, adaptable, and test-focused code. Values community engagement and effective communication. Loves pixel art, pizza, and sushi.</p>
       </section>
     </Layout>
   );

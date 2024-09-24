@@ -1,15 +1,15 @@
 import Layout from "../components/Layout";
 
-const Home = () => {
+const Resume = () => {
   return (
     <Layout>
       <section className="h-screen w-full relative">
-        {/* Your existing Home page content goes here */}
-        <h1>Welcome to the Home Page</h1>
+        {/* Your existing Resume page content goes here */}
+        <h1>Welcome to the Resume Page</h1>
         {/* Add more content as needed */}
       </section>
     </Layout>
   );
 };
 
-export default Home;
+export default Resume;

@@ -4,18 +4,27 @@ import Head from "../models/Head";
 
 const Layout = ({ children }) => {
   const [headProps, setHeadProps] = useState({
-    screenScale: [5, 5, 5],
-    screenPosition: [0, 2, -10],
-    rotation: [0, 3.14, 0]
+    screenScale: [10, 10, 10],
+    screenPosition: [0, 0.5, 0],
+    rotation: [0, 3.14, 0],
   });
 
-  const adjustHeadForScreenSize = () => {
+  const adjustHeadForScreenSize = useCallback(() => {
+    const aspectRatio = window.innerWidth / window.innerHeight;
+    let scale;
+
     if (window.innerWidth < 768) {
-      setHeadProps(prev => ({ ...prev, screenScale: [3, 3, 3], screenPosition: [0, 1, -10] }));
+      scale = aspectRatio < 1 ? [1, 1, 1] : [2, 2, 2];
     } else {
-      setHeadProps(prev => ({ ...prev, screenScale: [5, 5, 5], screenPosition: [0, 2, -10] }));
+      scale = [2, 2, 2];
     }
-  };
+
+    setHeadProps((prev) => ({
+      ...prev,
+      screenScale: scale,
+      screenPosition: [0, 0.5, 0], // Ensure the head is at the center
+    }));
+  }, []);
 
   const MouseTracker = () => {
     const onMouseMove = useCallback(({ clientX, clientY }) => {
@@ -25,7 +34,7 @@ const Layout = ({ children }) => {
       const rotationY = Math.atan2(x, 3) * 0.5;
       const rotationX = Math.atan2(y, 3) * 0.5;
       
-      setHeadProps(prev => ({
+      setHeadProps((prev) => ({
         ...prev,
         rotation: [rotationX, 3.14 + rotationY, 0]
       }));
@@ -41,30 +50,32 @@ const Layout = ({ children }) => {
 
   useEffect(() => {
     adjustHeadForScreenSize();
-    window.addEventListener('resize', adjustHeadForScreenSize);
-    return () => window.removeEventListener('resize', adjustHeadForScreenSize);
-  }, []);
+    window.addEventListener("resize", adjustHeadForScreenSize);
+    return () => window.removeEventListener("resize", adjustHeadForScreenSize);
+  }, [adjustHeadForScreenSize]);
 
   return (
     <div className="relative min-h-screen">
-      <Canvas
-        className="fixed top-0 left-0 w-full h-full pointer-events-none"
-        camera={{ position: [0, 0, 0], fov: 50, near: 0.1, far: 1000 }}
-      >
-        <Suspense fallback={null}>
-          <directionalLight position={[5, 5, 5]} intensity={1} />
-          <ambientLight intensity={0.5} />
-          <Head
-            scale={headProps.screenScale}
-            position={headProps.screenPosition}
-            rotation={headProps.rotation}
-          />
-          <MouseTracker />
-        </Suspense>
-      </Canvas>
-      <main className="relative z-10">
-        {children}
-      </main>
+      <div className="absolute inset-0 z-0">
+        <main>{children}</main>
+      </div>
+      <div className="absolute inset-0 z-10">
+        <Canvas
+          className="w-full h-full"
+          camera={{ position: [0, 0, 5], fov: 50, near: 1, far: 1000 }}
+        >
+          <Suspense fallback={null}>
+            <directionalLight position={[5, 5, 5]} intensity={1} />
+            <ambientLight intensity={0.5} />
+            <Head
+              scale={headProps.screenScale}
+              position={headProps.screenPosition}
+              rotation={headProps.rotation}
+            />
+            <MouseTracker />
+          </Suspense>
+        </Canvas>
+      </div>
     </div>
   );
 };
