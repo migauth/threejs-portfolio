@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <main className="bg-orange-900 h-screen w-screen">
+    <main className="bg-white h-screen w-screen">
       <Router>
         <Navbar />
         <Routes>
