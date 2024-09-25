@@ -1,7 +1,9 @@
+/* eslint-disable react/no-unknown-property */
 import { Suspense, useEffect, useState, useCallback } from "react";
 import { Canvas } from "@react-three/fiber";
 import Head from "../models/Head";
 
+// eslint-disable-next-line react/prop-types
 const Layout = ({ children }) => {
   const [headProps, setHeadProps] = useState({
     screenScale: [10, 10, 10],
