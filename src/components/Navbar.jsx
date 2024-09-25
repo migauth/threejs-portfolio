@@ -57,7 +57,7 @@ const Navbar = () => {
             <NavLink
               key={to}
               to={to}
-              className="text-3xl absolute p-2 bg-gray-100 text-gray-800 no-underline pointer-events-auto transform -translate-x-1/2 -translate-y-1/2 transition-all duration-100 ease-linear"
+              className="text-3xl absolute p-2 bg-transparent text-yellow-500 no-underline pointer-events-auto transform -translate-x-1/2 -translate-y-1/2 transition-all duration-100 ease-linear"
               style={{
                 left: `${x}px`,
                 top: `${y}px`,
