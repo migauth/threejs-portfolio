@@ -42,29 +42,41 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { to: "/", label: "Resume", angle: Math.PI / 2 },
-    { to: "/about", label: "About", angle: (6 * Math.PI) / 6 }, // Adjusted angle
-    { to: "/projects", label: "Projects", angle: (12 * Math.PI) / 6 }, // Adjusted angle
-    { to: "/contact", label: "Contact", angle: (3 * Math.PI) / 2 },
+    { to: "/", label: "Resume", angle: Math.PI / 2, radius: 30 }, // Added radius for sphere
+    { to: "/about", label: "About", angle: (6 * Math.PI) / 6, radius: 30 }, // Added radius for sphere
+    { to: "/projects", label: "Projects", angle: (12 * Math.PI) / 6, radius: 30 }, // Added radius for sphere
+    { to: "/contact", label: "Contact", angle: (3 * Math.PI) / 2, radius: 30 }, // Added radius for sphere
   ];
 
   return (
     <header className="fixed inset-0 pointer-events-none z-50">
       <nav className="w-full h-full relative">
-        {navItems.map(({ to, label, angle }) => {
+        {navItems.map(({ to, label, angle, radius }) => {
           const { x, y } = calculatePosition(angle);
           return (
-            <NavLink
+            <div
               key={to}
-              to={to}
-              className="text-3xl absolute p-2 bg-transparent text-yellow-500 no-underline pointer-events-auto transform -translate-x-1/2 -translate-y-1/2 transition-all duration-100 ease-linear"
               style={{
+                position: 'absolute',
                 left: `${x}px`,
                 top: `${y}px`,
+                width: `${radius * 2}px`,
+                height: `${radius * 2}px`,
+                borderRadius: '50%',
+                background: 'radial-gradient(circle at 30% 30%, #ffffff, #a0a0a0)',
+                boxShadow: '0 4px 10px rgba(0, 0, 0, 0.3)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
               }}
             >
-              {label}
-            </NavLink>
+              <NavLink
+                to={to}
+                className="text-3xl bg-transparent text-black no-underline pointer-events-auto transition-all duration-100 ease-linear"
+              >
+                {label}
+              </NavLink>
+            </div>
           );
         })}
       </nav>
