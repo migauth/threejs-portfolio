@@ -1,5 +1,3 @@
-- ~~Make nav bar rotate circular around head~~
-
 # MVP
 
 - Create low poly head in blender
