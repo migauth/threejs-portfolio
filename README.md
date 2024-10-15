@@ -1,4 +1,6 @@
-# React + Vite
+# My Portfolio Website - Now in 3d!
+
+## Created with React + Vite, React 3 Fiber
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
