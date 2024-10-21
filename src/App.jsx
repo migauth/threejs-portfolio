@@ -11,8 +11,8 @@ function App() {
   return (
     <main className="bg-white h-screen w-screen">
       <header className="flex justify-between m-16">
-        <div id="logo">
-          <h1>Michael Gauthier</h1>
+        <div>
+          <h1 id="logo" className="text-2xl">Michael Gauthier</h1>
         </div>
         <Navbar />
       </header>

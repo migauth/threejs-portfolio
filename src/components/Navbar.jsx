@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-around border border-black w-1/2">
+    <nav className="flex justify-around border border-black w-1/2 text-2xl">
       <button className="px-4 py-2">
       <Link to="/">Home</Link>
       </button>

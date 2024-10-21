@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'GamestationCondensed-GYay';
+  src: local('GamestationCondensed-GYay'), 
+       url('./assets/GamestationCondensed-GYay.otf') format('opentype');
+}
+
+body {
+  font-family: "GamestationCondensed-GYay";
+}
