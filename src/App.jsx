@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import "./App.css";
 import { Canvas, useLoader, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
@@ -11,6 +12,7 @@ function Name() {
   const gltf = useLoader(GLTFLoader, "/models/3dnamePS.glb");
   const ref = useRef()
 
+  // Circular rotation
   useFrame((_, delta) => {
     ref.current.rotation.y += 1 * delta
   })
