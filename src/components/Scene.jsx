@@ -13,12 +13,12 @@ function Name() {
   useFrame((_, delta) => {
     ref.current.rotation.y += 1 * delta;
   });
-  return <primitive object={gltf.scene} position={[0, 1, 0]} ref={ref} />;
+  return <primitive object={gltf.scene} position={[0.5, 0.5, -1]} ref={ref} />;
 }
 
 export default function Scene() {
   return (
-    <Canvas camera={{ position: [-0.7, 0.8, 2.5] }}>
+    <Canvas camera={{ position: [-1, 0.8, 2.5] }}>
       <directionalLight position={[1, 1, 1]} intensity={Math.PI * 1} />
       <Name />
       <OrbitControls />

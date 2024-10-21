@@ -2,12 +2,10 @@
 import "./App.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Resume from "./pages/Resume";
+import Projects from "./pages/Projects";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-
-// I have to create another component for my name to spin so the canvas can render first.
-
-
 
 function App() {
   return (
@@ -19,12 +17,14 @@ function App() {
         <Navbar />
       </header>
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-
-      
+      <div className="m-16 h-2/3 ">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/resume" element={<Resume />} />
+        </Routes>
+      </div>
     </main>
   );
 }
