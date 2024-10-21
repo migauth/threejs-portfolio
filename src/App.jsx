@@ -1,37 +1,13 @@
 /* eslint-disable react/no-unknown-property */
 import "./App.css";
-import { Canvas, useLoader, useFrame } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import { GLTFLoader } from "three/addons/loaders/GLTFLoader";
-import { useRef } from "react";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
 // I have to create another component for my name to spin so the canvas can render first.
 
-function Name() {
-  const gltf = useLoader(GLTFLoader, "/models/3dnamePS.glb");
-  const ref = useRef()
 
-  // Circular rotation
-  useFrame((_, delta) => {
-    ref.current.rotation.y += 1 * delta
-  })
-  return (
-    <primitive object={gltf.scene} position={[0, 1, 0]} ref={ref} />
-
-  )
-}
-
-function Scene() {
-
-  return (
-    <Canvas camera={{ position: [-0.7, 0.8, 2.5] }}>
-      <directionalLight position={[1, 1, 1]} intensity={Math.PI * 1} />
-      <Name />
-      <OrbitControls />
-    </Canvas>
-  );
-}
 
 function App() {
   return (
@@ -43,9 +19,12 @@ function App() {
         <Navbar />
       </header>
 
-      <div className="border border-black rounded-3xl m-16 ">
-        <Scene />
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+
+      
     </main>
   );
 }
