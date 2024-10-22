@@ -3,7 +3,6 @@ import { Canvas, useLoader, useFrame } from "@react-three/fiber";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader";
 import { useRef } from "react";
 
-
 function Name() {
   const gltf = useLoader(GLTFLoader, "/models/3dnamePS.glb");
   const ref = useRef();
@@ -19,7 +18,10 @@ export default function Scene() {
   return (
     <Canvas camera={{ position: [-1, 0.8, 2.5] }}>
       <directionalLight position={[1, 1, 1]} intensity={Math.PI * 1} />
-      <Name />
+      <mesh>
+        <meshStandardMaterial color="lime" />
+        <sphereGeometry args={[1, 64, 64]} />
+      </mesh>
     </Canvas>
   );
 }
