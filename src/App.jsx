@@ -4,10 +4,12 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Resume from "./pages/Resume";
 import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Loading from "./components/Loading";
 import { Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -29,7 +31,7 @@ function App() {
           <header className="flex justify-between m-16">
             <div>
               <h1 id="logo" className="text-2xl">
-                Michael Gauthier
+                <Link to="/">Michael Gauthier</Link>
               </h1>
             </div>
             <Navbar />
@@ -40,6 +42,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/resume" element={<Resume />} />
+              <Route path="/contact" element={<Contact/>} />
             </Routes>
           </div>
         </main>

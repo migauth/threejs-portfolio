@@ -2,6 +2,7 @@
 import { Canvas, useLoader, useFrame } from "@react-three/fiber";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader";
 import { useRef } from "react";
+// import Sphere from "./Sphere";
 
 function Name() {
   const gltf = useLoader(GLTFLoader, "/models/3dnamePS.glb");
@@ -14,14 +15,33 @@ function Name() {
   return <primitive object={gltf.scene} position={[0.5, 0.5, -1]} ref={ref} />;
 }
 
-export default function Scene() {
+function Sphere(props) {
+
+  const ref = useRef();
+
+  useFrame((_, delta) => {
+    ref.current.rotation.y += 1 * delta;
+  });
+
   return (
-    <Canvas camera={{ position: [-1, 0.8, 2.5] }}>
-      <directionalLight position={[1, 1, 1]} intensity={Math.PI * 1} />
-      <mesh>
-        <meshStandardMaterial color="lime" />
-        <sphereGeometry args={[1, 64, 64]} />
+    <>
+      <mesh {...props} ref={ref}>
+        <sphereGeometry args={[1, 20, 20]} />
+        <meshStandardMaterial color="lime" wireframe/>
       </mesh>
+    </>
+  );
+}
+
+export default function Scene() {
+
+  return (
+    <Canvas camera={{ position: [-1, 0.8, 2.5] }} >
+      <ambientLight />
+      <Sphere position={[-0.75, 0, 0]}  />
+      <Sphere position={[0.75, 0, 0]} />
+      <Sphere position={[2, 0, 0]} />
+      <Sphere position={[4, 0, 0]} />
     </Canvas>
   );
 }
