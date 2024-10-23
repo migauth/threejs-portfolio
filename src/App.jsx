@@ -57,7 +57,7 @@ function App() {
             <header className="fixed flex top-0 left-0 w-full z-10 mt-8 bg-transparent">
               <Navbar />
             </header>
-            <div className="fixed top-1/3 w-full px-10 left-0 bg-transparent">
+            <div className="fixed top-1/3 w-full px-20 left-0 bg-transparent">
               <Routes>
                 <Route path="/about" element={<About />} />
                 <Route path="/projects" element={<Projects />} />
