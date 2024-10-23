@@ -13,7 +13,7 @@ export default function Navbar() {
         <Link to="/projects">Projects</Link>
       </button>
       <button className="px-4 py-2">
-        <Link to="/contact">Contact</Link>
+        <Link to="/contacts">Contact</Link>
       </button>
     </nav>
   );
