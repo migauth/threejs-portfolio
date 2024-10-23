@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unknown-property */
 import { Canvas, useLoader, useFrame } from "@react-three/fiber";
-import { GLTFLoader } from "three/addons/loaders/GLTFLoader";
 import { useRef } from "react";
 // import Sphere from "./Sphere";
 
