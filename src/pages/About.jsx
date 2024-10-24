@@ -7,7 +7,7 @@ export default function About() {
   return (
     <section>
       <div className="page-content text-4xl">
-        <div className="icons text-8xl flex gap-14">
+        <div className="flex text-8xl md:flex-row lg: gap-14">
           <a
             href="https://github.com/migauth"
             target="_blank"
@@ -26,7 +26,7 @@ export default function About() {
             <FontAwesomeIcon icon={faEnvelope} className="about-icon" />
           </a>
         </div>
-        <p className="bio">
+        <p className="bio mt-5">
           Full stack web developer blending expertise in inclusive education and
           creative practices. Emphasizes the creation of effective, adaptable,
           and test-focused code. Values community engagement and effective
