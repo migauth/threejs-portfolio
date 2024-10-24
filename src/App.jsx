@@ -40,17 +40,17 @@ function App() {
   return (
     <>
       {isLoading ? (
-        <main className="bg-white h-screen w-screen">
+        <main className="  h-screen w-screen">
           <Loading />
         </main>
       ) : (
-        <main className="w-full h-screen relative">
+        <main className="w-full h-screen relative bg-gradient-to-r from-lime-200 to-lime-600">
           <Canvas
             className="fixed top-0 left-0 w-full h-full z-0"
-            camera={{ position: [-1, 0.8, 2.5] }}
+            camera={{ position: [10, -2, 0] }}
           >
             <ambientLight />
-            <Sphere position={[-0.75, 0, 0]} />
+            <Sphere position={[10, -1.5, 0]} />
             <OrbitControls />
           </Canvas>
           <div className="relative z-10">
