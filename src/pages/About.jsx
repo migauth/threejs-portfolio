@@ -7,7 +7,7 @@ export default function About() {
   return (
     <section>
       <div className="page-content text-4xl">
-        <div className="icons text-8xl">
+        <div className="icons text-8xl flex gap-14">
           <a
             href="https://github.com/migauth"
             target="_blank"
