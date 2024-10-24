@@ -1,15 +1,13 @@
 /* eslint-disable react/no-unknown-property */
 import "./App.css";
 import About from "./pages/About";
-import Resume from "./pages/Resume";
-import Projects from "./pages/Projects";
+import CV from "./pages/CV";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Loading from "./components/Loading";
 import { Route, Routes } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
 
 function Sphere(props) {
   const ref = useRef();
@@ -40,28 +38,30 @@ function App() {
   return (
     <>
       {isLoading ? (
-        <main className="  h-screen w-screen">
+        <main className="h-screen w-screen">
           <Loading />
         </main>
       ) : (
         <main className="w-full h-screen relative bg-gradient-to-r from-lime-200 to-lime-600">
           <Canvas
+          flat
+          shadows
             className="fixed top-0 left-0 w-full h-full z-0"
             camera={{ position: [10, -2, 0] }}
           >
             <ambientLight />
             <Sphere position={[10, -1.5, 0]} />
-            <OrbitControls />
           </Canvas>
+
           <div className="relative z-10">
-            <header className="fixed flex top-0 left-0 w-full z-10 mt-8 bg-transparent">
+            <header className="fixed flex top-0 left-0 w-full z-20 m-4 bg-transparent">
               <Navbar />
             </header>
-            <div className="fixed top-1/3 w-full px-20 left-0 bg-transparent">
+            <div className="fixed top-1/4 w-full left-0 bg-transparent p-4 md:p-8 lg:p-12 xl:p-16">
               <Routes>
+                <Route path="/" element={null} />
                 <Route path="/about" element={<About />} />
-                <Route path="/projects" element={<Projects />} />
-                <Route path="/resume" element={<Resume />} />
+                <Route path="/resume" element={<CV />} />
                 <Route path="/contact" element={<Contact />} />
               </Routes>
             </div>
