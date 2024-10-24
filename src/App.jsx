@@ -6,9 +6,9 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Loading from "./components/Loading";
-import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
-import { Canvas, useLoader, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 
 function Sphere(props) {
