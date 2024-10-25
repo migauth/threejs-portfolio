@@ -1,9 +1,16 @@
 export default function Resume() {
   return (
     <div>
-      <a id="resume" href="./documents/Michael_Gauthier_Resume.pdf" download>
-        click here to download my resume
-      </a>
+      <ul>
+        <li>
+          Diploma, Web Development: 05/2024 Lighthouse Labs - Victoria, BC
+          (Remote online)
+        </li>
+        <li>
+          Bachelor of Fine Arts, Art Education: 06/2014 Concordia University -
+          Montreal, Quebec
+        </li>
+      </ul>
     </div>
   );
 }
