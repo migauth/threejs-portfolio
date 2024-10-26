@@ -1,7 +1,28 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+
 export default function Contact() {
   return (
-    <div>
-      <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non molestiae harum natus doloremque voluptate veniam excepturi! Porro consequuntur optio delectus autem quo. Doloremque voluptates minus id ducimus asperiores expedita, rerum cupiditate soluta? Eum ipsam sint quaerat ab doloribus unde voluptates incidunt eos maxime at vel placeat alias dolorem iste, odit, tempore ad cupiditate doloremque vitae omnis accusamus dolore. Architecto deserunt numquam vitae iure velit officia voluptates accusantium et, odit, magni nihil recusandae quod debitis sunt soluta cumque! In nisi eaque expedita nobis sit maxime perspiciatis, eum veritatis quis molestias sequi.</h1>
-    </div>
+    <section className="w-full h-screen relative text-8xl pl-12 pt-48">
+      <a
+        href="https://github.com/migauth"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FontAwesomeIcon icon={faGithub} className="about-icon" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/michael-gauthier-a502b799/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FontAwesomeIcon icon={faLinkedinIn} className="about-icon" />
+      </a>
+      <a href="mailto:mikegauthier222@hotmail.com">
+        <FontAwesomeIcon icon={faEnvelope} className="about-icon" />
+      </a>
+    </section>
   );
 }

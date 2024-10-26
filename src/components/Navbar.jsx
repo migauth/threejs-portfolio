@@ -1,20 +1,22 @@
-import { Link } from "react-router-dom";
-
 export default function Navbar() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
-      <nav className="gap-4 flex flex-col text-4xl items-start sm:flex-row">
+      <nav className="fixed gap-4 flex flex-col text-4xl w-full z-10 bg-purple-500 p-4 items-start sm:flex-row">
         <h1 id="logo" className="pr-4">
-          <Link to="/">Michael Gauthier</Link>
+          <a href="#" onClick={scrollToTop}>Michael Gauthier</a>
         </h1>
-        <button className="pr-4 hidden sm:visible">
-          <Link to="/about">About</Link>
+        <button className="pr-4">
+          <a href="#about">About</a>
         </button>
         <button className="pr-4">
-          <Link to="/resume">CV</Link>
+          <a href="#cv">CV</a>
         </button>
         <button className="pr-4">
-          <Link to="/contact">Contact</Link>
+          <a href="#contact">Contact</a>
         </button>
       </nav>
     </>

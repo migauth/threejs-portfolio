@@ -4,6 +4,10 @@
        url('./assets/GamestationCondensed-GYay.otf') format('opentype');
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "GamestationCondensed-GYay";
 }

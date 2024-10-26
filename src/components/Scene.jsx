@@ -26,7 +26,7 @@ function Sphere(props) {
     <>
       <mesh {...props} ref={ref}>
         <sphereGeometry args={[1, 20, 20]} />
-        <meshStandardMaterial color="lime" wireframe/>
+        <meshStandardMaterial color="yellow" wireframe/>
       </mesh>
     </>
   );
@@ -38,9 +38,6 @@ export default function Scene() {
     <Canvas camera={{ position: [-1, 0.8, 2.5] }} >
       <ambientLight />
       <Sphere position={[-0.75, 0, 0]}  />
-      <Sphere position={[0.75, 0, 0]} />
-      <Sphere position={[2, 0, 0]} />
-      <Sphere position={[4, 0, 0]} />
     </Canvas>
   );
 }

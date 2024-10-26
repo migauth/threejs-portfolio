@@ -1,6 +1,6 @@
-export default function Resume() {
+export default function CV() {
   return (
-    <div>
+    <section className="text-4xl p-12">
       <ul>
         <li>
           Diploma, Web Development: 05/2024 Lighthouse Labs - Victoria, BC
@@ -11,6 +11,24 @@ export default function Resume() {
           Montreal, Quebec
         </li>
       </ul>
-    </div>
+      <hr />
+      <ul>
+        <li>
+          <b>Schmovies </b>
+          <span className="text-green-900">
+            The movie suggestion app ReactJS, Django, Python, PostgreSQL
+          </span>
+        </li>
+        <li>
+          Braille Translator – A simple braille translator Vue, JavaScript,
+          TailwindCSS
+        </li>
+        <li>
+          Jungle Rails – A mini e-commerce app Ruby on Rails, JavaScript, HTML,
+          SCSS
+        </li>
+        <li>Tweeter – Twitter clone JavaScript, HTML, CSS</li>
+      </ul>
+    </section>
   );
 }
