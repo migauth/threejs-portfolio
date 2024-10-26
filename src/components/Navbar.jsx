@@ -5,7 +5,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed gap-4 flex flex-col text-4xl w-full z-10 bg-purple-500 p-4 items-start sm:flex-row">
+      <nav className="fixed gap-4 flex flex-col text-4xl w-full z-10 bg-purple-500 p-4 items-start opacity-95 sm:flex-row">
         <h1 id="logo" className="pr-4">
           <a href="#" onClick={scrollToTop}>Michael Gauthier</a>
         </h1>

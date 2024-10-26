@@ -20,7 +20,7 @@
   position: absolute;
   left: 50%;
   top: 10%;
-  background: lime;
+  background: purple;
   width: 20px;
   height: 64px;
   animation: rotate 1.2s linear infinite alternate-reverse;

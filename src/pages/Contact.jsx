@@ -4,7 +4,7 @@ import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 export default function Contact() {
   return (
-    <section className="w-full h-screen relative text-8xl pl-12 pt-48">
+    <section className="w-full h-screen relative text-8xl pl-12 pt-48 flex gap-8">
       <a
         href="https://www.linkedin.com/in/michael-gauthier-a502b799/"
         target="_blank"
