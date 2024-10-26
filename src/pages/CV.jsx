@@ -9,20 +9,27 @@ export default function CV() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FontAwesomeIcon icon={faGithub} className="about-icon text-8xl pb-4 text-purple-200 hover:text-white" />
+        <FontAwesomeIcon
+          icon={faGithub}
+          className="about-icon text-8xl pb-4 text-purple-200 hover:text-white"
+        />
       </a>
       <ul>
         <li>
-          Diploma, Web Development: 05/2024 Lighthouse Labs - Victoria, BC
+          Lighthouse Labs ‣ Diploma, Web Development: 05/2024 - Victoria, BC
           (Remote online)
         </li>
         <li>
-          Bachelor of Fine Arts, Art Education: 06/2014 Concordia University -
+          Concordia University ‣ Bachelor of Fine Arts, Art Education: 06/2014 -
           Montreal, Quebec
         </li>
       </ul>
-      <hr />
+      <hr className="my-2" />
       <ul>
+        <li>
+          <b>This Website ;) ‣ </b>
+          <span className="text-purple-200">Built with React 3 Fiber</span>
+        </li>
         <li>
           <b>Schmovies ‣ </b>
           <span className="text-purple-200">
@@ -36,10 +43,17 @@ export default function CV() {
           </span>
         </li>
         <li>
-          Jungle Rails – A mini e-commerce app Ruby on Rails, JavaScript, HTML,
-          SCSS
+          <b>Jungle Rails ‣ </b>
+          <span className="text-purple-200">
+            A mini e-commerce app ○ Ruby on Rails, JavaScript, HTML, SCSS
+          </span>
         </li>
-        <li>Tweeter – Twitter clone JavaScript, HTML, CSS</li>
+        <li>
+          <b>Tweeter ‣ </b>
+          <span className="text-purple-200">
+            Twitter clone ○ JavaScript, HTML, CSS
+          </span>
+        </li>
       </ul>
     </section>
   );

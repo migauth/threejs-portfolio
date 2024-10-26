@@ -15,6 +15,9 @@ export default function Contact() {
       <a href="mailto:mikegauthier222@hotmail.com">
         <FontAwesomeIcon icon={faEnvelope} className="about-icon text-purple-200 hover:text-white" />
       </a>
+      <div>
+      <small className="text-xl">copyright © Michael Gauthier 2024</small>
+      </div>
     </section>
   );
 }
