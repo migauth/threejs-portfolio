@@ -13,7 +13,7 @@ function Sphere() {
   return (
     <points ref={ref}>
       <sphereGeometry args={[1, 48, 48]} />
-      <pointsMaterial color="purple" size={0.015} sizeAttenuation />
+      <pointsMaterial color="#A855F7" size={0.015} sizeAttenuation />
     </points>
   );
 }

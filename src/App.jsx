@@ -28,7 +28,7 @@ function App() {
           <header className="">
             <Navbar />
           </header>
-          <section id="home" className="">
+          <section id="home" className="opacity-90">
             <Home />
           </section>
           <section id="about">
