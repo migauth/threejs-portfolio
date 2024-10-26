@@ -5,17 +5,17 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed gap-4 flex flex-col text-4xl w-full z-10 bg-purple-500 p-4 items-start opacity-95 sm:flex-row">
-        <h1 id="logo" className="pr-4">
+      <nav className="fixed gap-4 flex flex-col text-4xl w-full z-10  bg-purple-500 p-4 items-start opacity-95 sm:flex-row">
+        <h1 id="logo" className="pr-4 text-purple-200 hover:text-white">
           <a href="#" onClick={scrollToTop}>Michael Gauthier</a>
         </h1>
-        <button className="pr-4">
+        <button className="pr-4 text-purple-200 hover:text-white">
           <a href="#about">About</a>
         </button>
-        <button className="pr-4">
+        <button className="pr-4 text-purple-200 hover:text-white">
           <a href="#cv">CV</a>
         </button>
-        <button className="pr-4">
+        <button className="pr-4 text-purple-200 hover:text-white">
           <a href="#contact">Contact</a>
         </button>
       </nav>

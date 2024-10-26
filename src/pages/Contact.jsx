@@ -10,10 +10,10 @@ export default function Contact() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FontAwesomeIcon icon={faLinkedinIn} className="about-icon" />
+        <FontAwesomeIcon icon={faLinkedinIn} className="about-icon text-purple-200 hover:text-white" />
       </a>
       <a href="mailto:mikegauthier222@hotmail.com">
-        <FontAwesomeIcon icon={faEnvelope} className="about-icon" />
+        <FontAwesomeIcon icon={faEnvelope} className="about-icon text-purple-200 hover:text-white" />
       </a>
     </section>
   );

@@ -9,7 +9,7 @@ export default function CV() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FontAwesomeIcon icon={faGithub} className="about-icon text-8xl pb-4" />
+        <FontAwesomeIcon icon={faGithub} className="about-icon text-8xl pb-4 text-purple-200 hover:text-white" />
       </a>
       <ul>
         <li>
@@ -24,14 +24,16 @@ export default function CV() {
       <hr />
       <ul>
         <li>
-          <b>Schmovies </b>
-          <span className="text-green-900">
-            The movie suggestion app ReactJS, Django, Python, PostgreSQL
+          <b>Schmovies ‣ </b>
+          <span className="text-purple-200">
+            The movie suggestion app ○ ReactJS, Django, Python, PostgreSQL
           </span>
         </li>
         <li>
-          Braille Translator – A simple braille translator Vue, JavaScript,
-          TailwindCSS
+          <b>Braille Translator ‣ </b>
+          <span className="text-purple-200">
+            A simple braille translator ○ Vue, JavaScript, TailwindCSS
+          </span>
         </li>
         <li>
           Jungle Rails – A mini e-commerce app Ruby on Rails, JavaScript, HTML,
