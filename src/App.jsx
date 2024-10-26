@@ -5,27 +5,8 @@ import CV from "./pages/CV";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Loading from "./components/Loading";
-import { useEffect, useState, useRef } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import Scene from "./components/Scene";
 import Home from "./pages/Home";
-
-function Sphere(props) {
-  const ref = useRef();
-
-  useFrame((_, delta) => {
-    ref.current.rotation.y += 0.1 * delta;
-  });
-
-  return (
-    <>
-      <mesh {...props} ref={ref}>
-        <sphereGeometry args={[1, 20, 20]} />
-        <meshStandardMaterial color="lime" wireframe />
-      </mesh>
-    </>
-  );
-}
+import { useEffect, useState} from "react";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);

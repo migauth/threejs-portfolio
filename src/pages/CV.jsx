@@ -1,6 +1,16 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+
 export default function CV() {
   return (
-    <section className="text-4xl p-12">
+    <section className="w-full h-screen relative text-4xl pt-48 p-12">
+      <a
+        href="https://github.com/migauth"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FontAwesomeIcon icon={faGithub} className="about-icon text-8xl pb-4" />
+      </a>
       <ul>
         <li>
           Diploma, Web Development: 05/2024 Lighthouse Labs - Victoria, BC
