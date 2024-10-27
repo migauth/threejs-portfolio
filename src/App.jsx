@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unknown-property */
 import "./App.css";
 import About from "./pages/About";
 import CV from "./pages/CV";
@@ -28,7 +27,7 @@ function App() {
           <header className="">
             <Navbar />
           </header>
-          <section id="home" className="opacity-90">
+          <section id="home" className="opacity-95">
             <Home />
           </section>
           <section id="about">

@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useMemo, useRef } from "react";
+import { useRef } from "react";
 
 function Sphere() {
 
@@ -12,8 +12,8 @@ function Sphere() {
 
   return (
     <points ref={ref}>
-      <sphereGeometry args={[1, 48, 48]} />
-      <pointsMaterial color="#A855F7" size={0.015} sizeAttenuation />
+      <sphereGeometry args={[1, 200, 200]} />
+      <pointsMaterial color="#A855F7" size={0.005} sizeAttenuation transparent opacity={0.7}/>
     </points>
   );
 }
