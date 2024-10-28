@@ -15,7 +15,7 @@ export default function About() {
         with a goal of working in 3D web or game development. I’m dedicated to
         crafting effective, adaptable, and test-driven code and value both
         community engagement and clear communication. When I'm not coding, I’m a
-        gaming climbing, cooking, or eating pizza.
+        gaming, bouldering, cooking, or eating pizza.
       </p>
     </section>
   );

@@ -7,15 +7,22 @@ function Sphere() {
 
   useEffect(() => {
     if (ref.current) {
-      console.log(ref.current); // Logs the positions array to the console
+      const positions = ref.current.geometry.attributes.position.array;
+
+      // Access a specific point by index, where each point has an x, y, z coordinate
+      const pointIndex = 0; // Replace this with the index of the point you want
+      const x = positions[pointIndex * 3];
+      const y = positions[pointIndex * 3 + 1];
+      const z = positions[pointIndex * 3 + 2];
+      console.log("Point coordinates:", { x, y, z });
     }
   }, [ref]);
 
   // const [hovered, hover] = useState(false);
 
-  // useFrame((_, delta) => {
-  //   ref.current.rotation.y += 0.1 * delta;
-  // });
+  useFrame((_, delta) => {
+    ref.current.rotation.y += 0.1 * delta;
+  });
 
   //access the points of each position on its axis with a position varible?
 
