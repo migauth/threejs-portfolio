@@ -9,13 +9,13 @@ export default function Navbar() {
         <h1 id="logo" className="pr-4 text-purple-200 hover:text-white">
           <a href="#" onClick={scrollToTop}>Michael Gauthier</a>
         </h1>
-        <button className="pr-4 text-purple-200 hover:text-white">
+        <button className="pr-4 text-purple-200 hover:text-white hidden sm:block">
           <a href="#about">About</a>
         </button>
-        <button className="pr-4 text-purple-200 hover:text-white">
+        <button className="pr-4 text-purple-200 hover:text-white hidden sm:block">
           <a href="#cv">CV</a>
         </button>
-        <button className="pr-4 text-purple-200 hover:text-white">
+        <button className="pr-4 text-purple-200 hover:text-white hidden sm:block">
           <a href="#contact">Contact</a>
         </button>
       </nav>

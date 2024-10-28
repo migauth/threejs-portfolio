@@ -5,7 +5,7 @@ import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Loading from "./components/Loading";
 import Home from "./pages/Home";
-import { useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -23,22 +23,24 @@ function App() {
           <Loading />
         </main>
       ) : (
-        <main className="w-full h-full bg-black text-white">
+        <main className="w-full h-full bg-black text-white flex-col justify-around ">
           <header className="">
             <Navbar />
           </header>
           <section id="home" className="opacity-95">
             <Home />
           </section>
-          <section id="about">
-            <About />
-          </section>
-          <section id="cv">
-            <CV />
-          </section>
-          <section id="contact">
-            <Contact />
-          </section>
+          <div className="p-12">
+            <section id="about">
+              <About />
+            </section>
+            <section id="cv">
+              <CV />
+            </section>
+            <section id="contact">
+              <Contact />
+            </section>
+          </div>
         </main>
       )}
     </>

@@ -3,7 +3,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default function CV() {
   return (
-    <section className="w-full h-screen relative text-4xl pt-48 p-12">
+    <section id="about" className="min-h-screen pt-20 text-4xl">
       <a
         href="https://github.com/migauth"
         target="_blank"
