@@ -23,6 +23,9 @@ export default function Contact() {
           />
         </a>
       </div>
+      <p className="text-2xl sm:text-6xl">
+        For colaboration or general inquiries, please reach out by email or linkedin!
+      </p>
       <div>
         <small className="text-xl">copyright © Michael Gauthier 2024</small>
       </div>
