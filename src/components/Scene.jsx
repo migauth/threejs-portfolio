@@ -5,6 +5,8 @@ import { useRef, useState, useEffect } from "react";
 function Sphere() {
   const ref = useRef();
 
+  const [hovered, setHovered] = useState(false)
+
   useEffect(() => {
     if (ref.current) {
       const positions = ref.current.geometry.attributes.position.array;
