@@ -1,20 +1,36 @@
 /* eslint-disable react/no-unknown-property */
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useRef, useState, useEffect } from "react";
+import * as THREE from "three";
+import { OrbitControls } from "@react-three/drei";
 
+// purple color "#A855F7"
 
-function Box() {
+const tempObject = new THREE.Object3D();
+
+function Spheres() {
   const ref = useRef();
+
+  const meshRef = useRef();
 
   const [hovered, setHovered] = useState(false);
 
-  useFrame((_, delta) => {
-    ref.current.rotation.y += 0.1 * delta;
+  useFrame((state) => {
+    let i = 0;
+    for (let x = 0; x < 10; x++)
+      for (let y = 0; y < 10; y++)
+        for (let z = 0; z < 10; z++) {
+          const id = i++;
+          tempObject.position.set(5 - x, 5 - y, 5 - z);
+          tempObject.updateMatrix();
+          meshRef.current.setMatrixAt(id, tempObject.matrix);
+        }
   });
 
   return (
-    <points
-      ref={ref}
+    <instancedMesh
+      ref={meshRef}
+      args={[null, null, 2000]}
       onPointerMove={(e) => {
         e.stopPropagation();
         console.log("Hover index of component:", e.index);
@@ -22,21 +38,18 @@ function Box() {
       }}
       onPointerOut={() => setHovered(false)}
     >
-      <boxGeometry args={[1, 1, 1, 20, 20, 20]} />
-      <pointsMaterial
-        color={hovered ? "#A855F7" : "orange"}
-        // color="#A855F7"
-        size={0.02}
-      />
-    </points>
+      <sphereGeometry args={[0.5, 10, 10]} />
+      <meshBasicMaterial color={"#A855F7"} />
+    </instancedMesh>
   );
 }
 
 export default function Scene() {
   return (
-    <Canvas camera={{ position: [0, 0, 1.9] }}>
+    <Canvas camera={{ position: [0, 0, 15] }}>
       <ambientLight intensity={0.5} />
-      <Box />
+      <Spheres />
+      <OrbitControls />
     </Canvas>
   );
 }
