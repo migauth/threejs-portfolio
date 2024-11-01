@@ -4,7 +4,7 @@ import { faSmile } from "@fortawesome/free-solid-svg-icons";
 
 export default function About() {
   return (
-    <section id="about" className="min-h-screen pt-20 text-6xl">
+    <div id="about" className="min-h-screen pt-20 text-6xl">
       <FontAwesomeIcon
         className="text-8xl pb-4 text-purple-200 hover:text-white"
         icon={faSmile}
@@ -17,6 +17,6 @@ export default function About() {
         community engagement and clear communication. When I'm not coding, I’m a
         gaming, bouldering, cooking, or eating pizza.
       </p>
-    </section>
+    </div>
   );
 }

@@ -9,28 +9,31 @@ import { OrbitControls } from "@react-three/drei";
 const tempObject = new THREE.Object3D();
 
 function Spheres() {
-  const ref = useRef();
-
   const meshRef = useRef();
-
   const [hovered, setHovered] = useState(false);
+  const count = 100
 
-  useFrame((state) => {
-    let i = 0;
-    for (let x = 0; x < 10; x++)
-      for (let y = 0; y < 10; y++)
-        for (let z = 0; z < 10; z++) {
-          const id = i++;
-          tempObject.position.set(5 - x, 5 - y, 5 - z);
-          tempObject.updateMatrix();
-          meshRef.current.setMatrixAt(id, tempObject.matrix);
-        }
+  useFrame((_, delta) => {
+    meshRef.current.rotation.y += 0.1 * delta;
+
+    for (let i = 0; i < count; i++) {
+      // Calculate the position based on a cubic arrangement
+      const x = (i % 10) * 1.2 - 6; // Adjust spacing and position
+      const y = Math.floor((i % 100) / 10) * 1.2 - 6;
+      const z = Math.floor(i / 100) * 1.2 - 6;
+
+      tempObject.position.set(x, y, Math.floor(i / 10) * 1.2 - 6); // Now this creates a depth effect
+      tempObject.updateMatrix();
+      meshRef.current.setMatrixAt(i, tempObject.matrix);
+    }
+
+    meshRef.current.instanceMatrix.needsUpdate = true;
   });
 
   return (
     <instancedMesh
       ref={meshRef}
-      args={[null, null, 2000]}
+      args={[null, null, count]}
       onPointerMove={(e) => {
         e.stopPropagation();
         console.log("Hover index of component:", e.index);
@@ -38,7 +41,7 @@ function Spheres() {
       }}
       onPointerOut={() => setHovered(false)}
     >
-      <sphereGeometry args={[0.5, 10, 10]} />
+      <sphereGeometry args={[0.1, 10, 10]} />
       <meshBasicMaterial color={"#A855F7"} />
     </instancedMesh>
   );
@@ -47,7 +50,7 @@ function Spheres() {
 export default function Scene() {
   return (
     <Canvas camera={{ position: [0, 0, 15] }}>
-      <ambientLight intensity={0.5} />
+      <ambientLight intensity={0.1} />
       <Spheres />
       <OrbitControls />
     </Canvas>
