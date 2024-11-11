@@ -30,7 +30,7 @@ function App() {
           <section id="home" className="opacity-95">
             <Home />
           </section>
-          <div className="p-12">
+          <div className="p-20">
             <section id="about">
               <About />
             </section>
