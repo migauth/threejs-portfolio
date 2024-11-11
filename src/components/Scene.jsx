@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/no-unknown-property */
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useRef, useState, useMemo } from "react";
+import { useRef, useMemo } from "react";
 import * as THREE from "three";
 
 // purple color "#A855F7"
@@ -58,7 +59,7 @@ const InstancedSpheres = ({ count, randomDistribution = true }) => {
 
   return (
     <instancedMesh ref={meshRef} args={[null, null, count]}>
-      <sphereGeometry args={[0.03, 8, 8]} />
+      <sphereGeometry args={[0.01, 8, 8]} />
       <meshStandardMaterial color="#A855F7" />
     </instancedMesh>
   );
