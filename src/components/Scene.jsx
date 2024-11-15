@@ -12,10 +12,13 @@ const InstancedSpheres = ({ count, randomDistribution = true }) => {
   const meshRef = useRef();
   const tempObject = new THREE.Object3D();
 
+  
+
   // Calculate initial positions for each sphere
   const initialPositions = useMemo(() => {
     const positions = new Float32Array(count * 3);
     const distance = 1;
+
 
     for (let i = 0; i < count; i++) {
       let x, y, z;
@@ -59,7 +62,7 @@ const InstancedSpheres = ({ count, randomDistribution = true }) => {
 
   return (
     <instancedMesh ref={meshRef} args={[null, null, count]}>
-      <sphereGeometry args={[0.01, 8, 8]} />
+      <sphereGeometry args={[0.004, 20, 20]} />
       <meshStandardMaterial color="#A855F7" />
     </instancedMesh>
   );
