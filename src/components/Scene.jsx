@@ -1,45 +1,34 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unknown-property */
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useRef, useMemo } from "react";
+import { useRef, useMemo, useState, useEffect } from "react";
 import * as THREE from "three";
 
 // purple color "#A855F7"
 
 // const tempObject = new THREE.Object3D();
 
-const InstancedSpheres = ({ count, randomDistribution = true }) => {
+const InstancedSpheres = ({ count, radius }) => {
   const meshRef = useRef();
   const tempObject = new THREE.Object3D();
-
-  
 
   // Calculate initial positions for each sphere
   const initialPositions = useMemo(() => {
     const positions = new Float32Array(count * 3);
-    const distance = 1;
-
 
     for (let i = 0; i < count; i++) {
-      let x, y, z;
+      const theta = THREE.MathUtils.randFloatSpread(360);
+      const phi = THREE.MathUtils.randFloatSpread(360);
 
-      if (randomDistribution) {
-        const theta = THREE.MathUtils.randFloatSpread(360);
-        const phi = THREE.MathUtils.randFloatSpread(360);
-
-        x = distance * Math.sin(theta) * Math.cos(phi);
-        y = distance * Math.sin(theta) * Math.sin(phi);
-        z = distance * Math.cos(theta);
-      } else {
-        x = (i % 10) * 1.2 - 6;
-        y = Math.floor((i % 100) / 10) * 1.2 - 6;
-        z = Math.floor(i / 100) * 1.2 - 6;
-      }
+      // Generate positions within the sphere based on the radius
+      const x = radius * Math.sin(theta) * Math.cos(phi);
+      const y = radius * Math.sin(theta) * Math.sin(phi);
+      const z = radius * Math.cos(theta);
 
       positions.set([x, y, z], i * 3);
     }
     return positions;
-  }, [count, randomDistribution]);
+  }, [count, radius]);
 
   // Animate each sphere on every frame
   useFrame((state) => {
@@ -68,11 +57,35 @@ const InstancedSpheres = ({ count, randomDistribution = true }) => {
   );
 };
 
-const Scene = () => (
-  <Canvas camera={{ position: [0, 0, 3] }}>
-    <ambientLight intensity={3} />
-    <InstancedSpheres count={2000} randomDistribution={true} />
-  </Canvas>
-);
+const Scene = () => {
+  const [radius, setRadius] = useState(1);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+
+      // Adjust the radius of the containing sphere based on screen size
+      if (width < 768) {
+        setRadius(0.5);
+      } else if (width < 1024) {
+        setRadius(0.75);
+      } else {
+        setRadius(1);
+      }
+    };
+
+    handleResize(); // Set initial size
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return (
+    <Canvas camera={{ position: [0, 0, 3] }}>
+      <ambientLight intensity={3} />
+      <InstancedSpheres count={2000} radius={radius} />
+    </Canvas>
+  );
+};
 
 export default Scene;
