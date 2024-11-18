@@ -30,17 +30,19 @@ function App() {
           <section id="home" className="opacity-95">
             <Home />
           </section>
-          <div className="p-20">
+          <div className="p-16 sm:p-20">
             <section id="about">
               <About />
             </section>
             <section id="cv">
               <CV />
             </section>
-            <section id="contact">
+            <section id="contact" className="border border-white">
               <Contact />
             </section>
           </div>
+          <small className="text-xl">copyright © Michael Gauthier 2024</small>
+
         </main>
       )}
     </>
