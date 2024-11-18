@@ -37,12 +37,10 @@ function App() {
             <section id="cv">
               <CV />
             </section>
-            <section id="contact" className="border border-white">
+            <section id="contact">
               <Contact />
             </section>
           </div>
-          <small className="text-xl">copyright © Michael Gauthier 2024</small>
-
         </main>
       )}
     </>
