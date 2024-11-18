@@ -30,44 +30,67 @@ export default function CV() {
           </span>
         </li>
       </ul>
-      <hr className="my-2" />
+      <hr className="my-2 w-1/2" />
       <ul>
         <li>
-          <b>This Website</b>
+          This Website
           <br />
           <span className="text-purple-300">○ React 3 Fiber</span>
         </li>
         <li>
-          <b className="text-white hover:text-purple-200">
-            <a
-              href="https://migauth.github.io/braille-translator/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Braille Translator
-            </a>
-          </b>{" "}
+          <a
+            href="https://migauth.github.io/braille-translator/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-purple-200"
+          >
+            Braille Translator
+          </a>
           <br />
           <span className="text-purple-300">
             ‣ A simple braille translator <br />○ Vue, JavaScript, TailwindCSS
           </span>
         </li>
         <li>
-          <b>Schmovies</b> <br />
+          <a
+            href="https://github.com/migauth/schmovies"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-purple-200"
+          >
+            Schmovies
+          </a>
+          <br />
           <span className="text-purple-300">
             ‣ The movie suggestion app <br />○ ReactJS, Django, Python,
             PostgreSQL
           </span>
         </li>
         <li>
-          <b>Jungle Rails</b> <br />
+          <a
+            href="https://github.com/migauth/jungle-rails"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-purple-200"
+          >
+            Jungle Rails
+          </a>
+          <br />
           <span className="text-purple-300">
             ‣ A mini e-commerce app <br />○ Ruby on Rails, JavaScript, HTML,
             SCSS
           </span>
         </li>
         <li>
-          <b>Tweeter</b> <br />
+          <a
+            href="https://github.com/migauth/tweeter-lhl"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-purple-200"
+          >
+            Tweeter
+          </a>
+          <br />
           <span className="text-purple-300">
             ‣ Twitter clone <br />○ JavaScript, HTML, CSS
           </span>

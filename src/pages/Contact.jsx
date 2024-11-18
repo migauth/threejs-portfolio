@@ -32,9 +32,7 @@ export default function Contact() {
           LinkedIn!
         </p>
       </div>
-      <small className="text-xl pb-4">
-        © 2024 Michael Gauthier
-      </small>
+      <small className="text-xl pb-4">© 2024 Michael Gauthier</small>
     </div>
   );
 }
