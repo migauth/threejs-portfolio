@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/no-unknown-property */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import * as THREE from "three";
 
 
@@ -27,11 +28,33 @@ function Name( {color} ) {
     });
   }, [gltf, color]);
 
+  const [size, setSize] = useState([0.3, 0.3, 0.3]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+
+      // Adjust the scale of font
+      if (width < 768) {
+        setSize([0.2, 0.2, 0.2]);
+      } else if (width < 1024) {
+        setSize([0.25, 0.25, 0.25]);
+      } else {
+        setSize([0.3, 0.3, 0.3]);
+      }
+    };
+
+    handleResize(); // Set initial size
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <primitive
       object={gltf.scene}
       position={[0, 0, 0]}
-      scale={[0.3, 0.3, 0.3]}
+      scale={size}
       rotation={[Math.PI / 2, 0, 0]}
       ref={ref}
     />
@@ -39,6 +62,8 @@ function Name( {color} ) {
 }
 
 export default function Contact() {
+  
+
   return (
     <div
       id="contact"
