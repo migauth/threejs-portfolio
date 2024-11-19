@@ -36,7 +36,7 @@ function Name( {color} ) {
 
       // Adjust the scale of font
       if (width < 768) {
-        setSize([0.2, 0.2, 0.2]);
+        setSize([0.15, 0.15, 0.15]);
       } else if (width < 1024) {
         setSize([0.25, 0.25, 0.25]);
       } else {
