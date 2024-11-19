@@ -9,7 +9,7 @@ export default function About() {
         className="text-8xl pb-4 text-purple-200 hover:text-white"
         icon={faSmile}
       />
-      <p className="bio text-2xl  sm:text-4xl">
+      <p className="bio text-2xl sm:text-4xl sm:w-3/5">
         I’m a full-stack web developer with a diverse background in inclusive
         education and creative practices. My passions span across many projects,
         with a goal of working in 3D web or game development. I’m dedicated to
