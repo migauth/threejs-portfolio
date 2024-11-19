@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { Canvas, useFrame } from "@react-three/fiber";
 
 export default function Contact() {
   return (
@@ -31,6 +32,7 @@ export default function Contact() {
           For collaboration or general inquiries, please reach out by email or
           LinkedIn!
         </p>
+
       </div>
       <small className="text-xl pb-4">© 2024 Michael Gauthier</small>
     </div>
