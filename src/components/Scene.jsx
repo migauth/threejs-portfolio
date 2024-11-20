@@ -64,11 +64,11 @@ const Scene = () => {
 
       // Adjust the radius of the containing sphere based on screen size
       if (width < 768) {
-        setRadius(0.5);
-      } else if (width < 1024) {
         setRadius(0.75);
-      } else {
+      } else if (width < 1024) {
         setRadius(1);
+      } else {
+        setRadius(1.5);
       }
     };
 
