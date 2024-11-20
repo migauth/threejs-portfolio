@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSmile } from "@fortawesome/free-solid-svg-icons";
+import { faSmile, faPizzaSlice } from "@fortawesome/free-solid-svg-icons";
 
 export default function About() {
   return (
@@ -15,7 +15,10 @@ export default function About() {
         with a goal of working in 3D web or game development. I’m dedicated to
         crafting effective, adaptable, and test-driven code and value both
         community engagement and clear communication. When I'm not coding, I’m a
-        gaming, bouldering, cooking, or eating pizza.
+        gaming, bouldering, cooking, or eating pizza{" "}
+        <span>
+          <FontAwesomeIcon className="text-purple-200 sm:text-3xl" icon={faPizzaSlice} />
+        </span>
       </p>
     </div>
   );
