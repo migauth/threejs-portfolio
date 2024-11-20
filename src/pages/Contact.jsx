@@ -9,7 +9,7 @@ import { useRef, useEffect, useState } from "react";
 import * as THREE from "three";
 
 
-function Name( {color} ) {
+function Thanks( {color} ) {
   const gltf = useLoader(GLTFLoader, "/models/thank-you.glb");
   const ref = useRef();
 
@@ -28,6 +28,7 @@ function Name( {color} ) {
     });
   }, [gltf, color]);
 
+  // Size for font
   const [size, setSize] = useState([0.3, 0.3, 0.3]);
 
   useEffect(() => {
@@ -62,8 +63,6 @@ function Name( {color} ) {
 }
 
 export default function Contact() {
-  
-
   return (
     <div
       id="contact"
@@ -96,7 +95,7 @@ export default function Contact() {
           <Canvas camera={{ position: [0, 0, 3], fov: 15 }}>
             <ambientLight intensity={3} color={"#ffffff"}/>
             <pointLight intensity={2} />
-            <Name color="#A855F7"/>
+            <Thanks color="#A855F7"/>
           </Canvas>
         </div>
       </div>
