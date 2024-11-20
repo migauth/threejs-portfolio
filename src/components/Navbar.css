@@ -1,0 +1,12 @@
+.navbar {
+  transition: background-color 0.5s ease-in-out;
+}
+
+.at-top {
+  background-color: transparent; 
+}
+
+.scrolled {
+  background-color:  rgb(168 85 247)
+}
+
