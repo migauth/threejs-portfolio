@@ -6,8 +6,6 @@ import * as THREE from "three";
 
 // purple color "#A855F7"
 
-// const tempObject = new THREE.Object3D();
-
 const InstancedSpheres = ({ count, radius }) => {
   const meshRef = useRef();
   const tempObject = new THREE.Object3D();
