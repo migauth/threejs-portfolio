@@ -80,7 +80,7 @@ export default function Contact() {
               className="about-icon text-purple-200 hover:text-white"
             />
           </a>
-          <a href="mailto:mikegauthier222@hotmail.com">
+          <a href="mailto:migauth@outlook.com">
             <FontAwesomeIcon
               icon={faEnvelope}
               className="about-icon text-purple-200 hover:text-white"
