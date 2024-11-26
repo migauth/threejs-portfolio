@@ -18,17 +18,12 @@ function App() {
 
   return (
     <>
-      {isLoading ? (
-        <main className="h-screen w-screen">
-          <Loading />
-        </main>
-      ) : (
         <main className="w-full h-full bg-black text-white flex-col justify-around ">
           <header className="">
             <Navbar />
           </header>
           <section id="home" className="opacity-95">
-            <Home />
+            <Home setIsLoading={setIsLoading} />
           </section>
           <div className="p-16 sm:p-20">
             <section id="about">
@@ -42,7 +37,6 @@ function App() {
             </section>
           </div>
         </main>
-      )}
     </>
   );
 }

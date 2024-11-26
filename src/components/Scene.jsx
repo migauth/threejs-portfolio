@@ -3,6 +3,7 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useRef, useMemo, useState, useEffect } from "react";
 import * as THREE from "three";
+import { useProgress, Html } from "@react-three/drei";
 
 // purple color "#A855F7"
 
@@ -55,7 +56,17 @@ const InstancedSpheres = ({ count, radius }) => {
   );
 };
 
-const Scene = () => {
+const Scene = ({ setIsLoading }) => {
+  const { progress } = useProgress();
+
+  useEffect(() => {
+    
+    console.log(progress);
+    if (progress === 100) {
+      setIsLoading(false); // Set loading to false once assets are fully loaded
+    }
+  }, [progress, setIsLoading]);
+
   const [radius, setRadius] = useState(1);
 
   useEffect(() => {
@@ -79,10 +90,21 @@ const Scene = () => {
   }, []);
 
   return (
-    <Canvas camera={{ position: [0, 0, 3] }}>
-      <ambientLight intensity={3} />
-      <InstancedSpheres count={2000} radius={radius} />
-    </Canvas>
+    <>
+      <Canvas camera={{ position: [0, 0, 3] }}>
+        <ambientLight intensity={3} />
+        <InstancedSpheres count={2000} radius={radius} />
+      </Canvas>
+      {progress < 100 && (
+        <Canvas>
+          <Html center>
+            <div className="text-white text-6xl">
+              {Math.round(progress)}% loading...
+            </div>
+          </Html>
+        </Canvas>
+      )}
+    </>
   );
 };
 
