@@ -1,9 +1,9 @@
 import Scene from "../components/Scene";
 
-export default function Home({ setIsLoading }) {
+export default function Home() {
   return (
     <div className="w-full h-screen relative">
-      <Scene setIsLoading={setIsLoading} />
+      <Scene />
       <div className="h-screen"></div>
     </div>
   );
