@@ -10,11 +10,9 @@ export default function About() {
         icon={faSmile}
       />
       <p className="bio text-2xl sm:text-4xl sm:w-3/5">
-        I’m a full-stack web developer with a diverse background in inclusive
+        Hello! I'm Mike. I’m a full-stack web developer with a diverse background in inclusive
         education and creative practices. My passions span across many projects,
-        with a goal of working in 3D web or game development. I’m dedicated to
-        crafting effective, adaptable, and test-driven code and value both
-        community engagement and clear communication. When I'm not coding, I’m a
+        with a goal of working in web or game development. I’m passionate about writing clean, flexible, and well-tested code. I believe in the power of community and clear communication to create meaningful connections. When I'm not coding, I’m a
         gaming, bouldering, cooking, or eating pizza{" "}
         <span>
           <FontAwesomeIcon className="text-purple-200 sm:text-3xl" icon={faPizzaSlice} />
