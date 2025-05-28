@@ -37,6 +37,7 @@ export default function CV() {
           <br />
           <span className="text-purple-300">○ React 3 Fiber</span>
         </li>
+        
         <li>
           <a
             href="https://migauth.github.io/braille-translator/"
@@ -49,6 +50,20 @@ export default function CV() {
           <br />
           <span className="text-purple-300">
             ‣ A simple braille translator <br />○ Vue, JavaScript, TailwindCSS
+          </span>
+        </li>
+        <li>
+          <a
+            href="https://bridgenorthbacksplash.ca/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-purple-200"
+          >
+            Bridgenorth Backsplash
+          </a>
+          <br />
+          <span className="text-purple-300">
+            ‣ A gallery website for a self-employed tiler specializing in backsplashes. <br />○ React, JavaScript, TailwindCSS
           </span>
         </li>
         <li>
