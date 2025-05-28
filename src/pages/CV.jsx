@@ -53,7 +53,7 @@ export default function CV() {
         </li>
         <li>
           <a
-            href="https://github.com/migauth/schmovies"
+            href="https://schmovieslive.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-purple-200"
