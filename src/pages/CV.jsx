@@ -3,7 +3,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default function CV() {
   return (
-    <div id="cv" className="min-h-screen pt-20 text-2xl sm:text-4xl">
+    <div id="cv" className="min-h-screen pt-20 text-2xl  sm:text-4xl">
       <a
         href="https://github.com/migauth"
         target="_blank"
@@ -15,7 +15,7 @@ export default function CV() {
         />
       </a>
       <ul>
-        <li>
+        <li className="py-4">
           Lighthouse Labs <br />
           <span className="text-purple-300">
             ‣ Diploma, Web Development: 05/2024 <br />○ Victoria, BC (Remote
@@ -31,14 +31,14 @@ export default function CV() {
         </li>
       </ul>
       <hr className="my-2 w-1/2" />
-      <ul>
-        <li>
+      <ul className="py-4">
+        <li className="py-1">
           This Website
           <br />
           <span className="text-purple-300">○ React 3 Fiber</span>
         </li>
-        
-        <li>
+
+        <li className="py-1">
           <a
             href="https://migauth.github.io/braille-translator/"
             target="_blank"
@@ -52,7 +52,7 @@ export default function CV() {
             ‣ A simple braille translator <br />○ Vue, JavaScript, TailwindCSS
           </span>
         </li>
-        <li>
+        <li className="py-1">
           <a
             href="https://bridgenorthbacksplash.ca/"
             target="_blank"
@@ -63,10 +63,11 @@ export default function CV() {
           </a>
           <br />
           <span className="text-purple-300">
-            ‣ A gallery website for a self-employed tiler specializing in backsplashes. <br />○ React, JavaScript, TailwindCSS
+            ‣ A gallery website for a self-employed tiler specializing in
+            backsplashes. <br />○ React, JavaScript, TailwindCSS
           </span>
         </li>
-        <li>
+        <li className="py-1">
           <a
             href="https://schmovieslive.netlify.app/"
             target="_blank"
@@ -77,11 +78,11 @@ export default function CV() {
           </a>
           <br />
           <span className="text-purple-300">
-            ‣ The movie suggestion app <br />○ ReactJS, Django, Python,
-            PostgreSQL
+            ‣ A movie suggestion and mini movie database. <br />○ ReactJS,
+            Django, Python, PostgreSQL
           </span>
         </li>
-        <li>
+        <li className="py-1">
           <a
             href="https://github.com/migauth/jungle-rails"
             target="_blank"
@@ -96,7 +97,7 @@ export default function CV() {
             SCSS
           </span>
         </li>
-        <li>
+        <li className="py-1">
           <a
             href="https://github.com/migauth/tweeter-lhl"
             target="_blank"

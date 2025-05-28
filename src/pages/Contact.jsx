@@ -99,7 +99,7 @@ export default function Contact() {
           </Canvas>
         </div>
       </div>
-      <small className="text-xl pb-4">© 2024 Michael Gauthier</small>
+      <small className="text-xl pb-4">© 2025 Michael Gauthier</small>
     </div>
   );
 }
