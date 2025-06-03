@@ -12,7 +12,7 @@ export default function About() {
       <p className="bio text-2xl sm:text-4xl sm:w-3/5">
         Hello! I'm Mike. I’m a full-stack web developer with a diverse background in inclusive
         education and creative practices. My passions span across many projects,
-        with a goal of working in web or game development. I focus on writing clean, flexible, and well-tested code. I believe in the power of community and clear communication to create meaningful connections. When I'm not coding, I’m a
+        with a goal of working in web or game development. I like to keep my code clean, flexible, and reliable. I’m a big believer in clear communication and working with others to make things that are meaningful. When I'm not coding, I’m a
         gaming, bouldering, cooking, or eating pizza{" "}
         <span>
           <FontAwesomeIcon className="text-purple-200 sm:text-3xl" icon={faPizzaSlice} />
